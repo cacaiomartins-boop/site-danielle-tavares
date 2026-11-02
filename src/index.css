@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @apply bg-sand-50 font-sans text-base leading-relaxed text-ink antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.clay.500");
+  outline-offset: 3px;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .h2 {
+    @apply text-balance font-serif text-3xl font-semibold leading-tight text-forest-800 md:text-5xl;
+  }
+  .lead {
+    @apply max-w-[62ch] text-lg leading-relaxed text-ink/75;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-7 py-3.5 text-base font-bold;
+    @apply transition duration-150 ease-out active:scale-[0.98];
+  }
+  .btn-primary {
+    @apply btn bg-clay-500 text-white shadow-lg shadow-clay-500/25 hover:bg-clay-600;
+  }
+  .btn-ghost {
+    @apply btn border border-forest-800/25 text-forest-800 hover:bg-forest-800 hover:text-sand-50;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    @apply transition-none active:scale-100;
+  }
+}
