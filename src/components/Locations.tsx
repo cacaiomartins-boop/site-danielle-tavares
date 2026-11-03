@@ -46,14 +46,7 @@ export default function Locations() {
               ))}
             </ul>
 
-            <p className="mt-6 text-base text-ink/75">
-              {clinic.showPrice && (
-                <>
-                  Sessão de psicoterapia: <strong className="font-bold text-forest-800">{clinic.price}</strong>.{" "}
-                </>
-              )}
-              {locations.payment}
-            </p>
+            <p className="mt-6 text-base text-ink/75">{locations.payment}</p>
 
             <a href={whatsappUrl()} target="_blank" rel="noreferrer" className="btn-primary mt-6">
               <WhatsAppIcon size={22} /> {clinic.cta}

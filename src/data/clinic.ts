@@ -1,5 +1,6 @@
 // Todos os textos, links e imagens do site ficam aqui.
-// Fonte: perfil da profissional no Doctoralia (02/11/2026).
+// Fonte: perfil da profissional no Doctoralia (02/11/2026) e currículo enviado por ela (03/11/2026).
+// Valores de sessão NÃO aparecem no site, a pedido dela.
 
 export const clinic = {
   name: "Danielle Tavares Siqueira",
@@ -10,9 +11,7 @@ export const clinic = {
   whatsappLabel: "(21) 99731-8579",
   whatsappMessage: "Olá, Danielle! Vi seu site e gostaria de agendar uma consulta.",
   doctoralia: "https://www.doctoralia.com.br/perfil/danielle-tavares-siqueira",
-  // Valor da sessão no Doctoralia. Mude showPrice para false para ocultar.
-  showPrice: true,
-  price: "R$ 500",
+  email: "danielletavaressiqueira@gmail.com",
   // Rótulo único do botão de ação, repetido no menu, no topo e no fim da página.
   cta: "Agendar consulta",
   images: {
@@ -31,7 +30,7 @@ export const nav = [
 
 export const hero = {
   title: "Psicoterapia que escuta a mente e o corpo",
-  text: "Psicóloga e psicanalista no Leblon, em Copacabana e online. Quase 30 anos de clínica com adultos.",
+  text: "Psicóloga e psicanalista no Leblon, em Copacabana e online. Quase 30 anos de clínica com crianças, adolescentes e adultos.",
   secondary: "Conhecer o trabalho",
 };
 
@@ -45,8 +44,8 @@ export const trust = [
 export const about = {
   title: "Sobre mim",
   paragraphs: [
-    "Sou psicóloga e psicanalista e atuo na clínica desde 1997. Uno a escuta psicanalítica a abordagens que incluem o corpo no cuidado emocional.",
-    "Atendo em psicoterapia individual, no Leblon, em Copacabana e online. Também supervisiono outros psicólogos e coordeno a Formação de Supervisores do IABSP.",
+    "Sou psicóloga, psicanalista e psicoterapeuta corporal, com quase 30 anos de clínica. Meu trabalho une a Psicanálise, a Análise Bioenergética, a Biossíntese e o Somatic Experiencing, com atenção à consciência corporal e à elaboração de experiências traumáticas.",
+    "Atendo crianças, adolescentes e adultos, no Leblon, em Copacabana e online. Também supervisiono psicólogos e coordeno programas de formação, sempre com rigor clínico e respeito à singularidade de cada pessoa.",
   ],
 };
 
@@ -75,6 +74,8 @@ export const approaches = {
 
 export const topics = {
   title: "Quando procurar terapia",
+  intro:
+    "Atendo crianças, adolescentes e adultos, com orientação de pais e atenção a questões familiares. Alguns motivos que trazem as pessoas:",
   items: [
     "Ansiedade e crises de pânico",
     "Depressão e angústia existencial",
@@ -140,21 +141,87 @@ export const mapEmbedUrl = (query: string) =>
 export const mapOpenUrl = (query: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 
+export type TimelineItem = { title: string; where?: string; years?: string; note?: string };
+
 export const training = {
   title: "Formação e atuação",
+  educationTitle: "Formação e certificações",
+  careerTitle: "Atuação profissional",
   education: [
-    "Psicologia, Universidade Santa Úrsula",
-    "Pós-graduação em Teoria e Prática Psicanalítica (CEPCOP/Santa Úrsula)",
-    "CBT, Certified Bioenergetic Therapist (IIBA, Suíça)",
-    "Pós-graduação em Formação de Supervisores em Terapia Bioenergética (IABSP)",
-    "Pós-graduação em Biossíntese (Instituto Brasileiro de Biossíntese)",
-    "SEP, Somatic Experiencing Practitioner (Associação Brasileira de Trauma)",
-  ],
+    {
+      title: "Somatic Experiencing Practitioner (SEP)",
+      where: "Associação Brasileira de Trauma (ABT), vinculada ao Somatic Experiencing International, Estados Unidos",
+      years: "2023 a 2024",
+    },
+    {
+      title: "Pós-graduação em Biossíntese",
+      where: "Instituto Brasileiro de Biossíntese, vinculado ao International Institute for Biosynthesis, Suíça",
+      years: "2020 a 2022",
+    },
+    {
+      title: "Pós-graduação em Formação de Supervisores em Terapia Bioenergética",
+      where: "Instituto de Análise Bioenergética de São Paulo (IABSP)",
+      years: "2019 a 2021",
+    },
+    {
+      title: "Certified Bioenergetic Therapist (CBT)",
+      where: "International Institute for Bioenergetic Analysis (IIBA), Suíça",
+      years: "2009 a 2014",
+    },
+    {
+      title: "Pós-graduação em Teoria e Prática Psicanalítica",
+      where: "CEPCOP, Universidade Santa Úrsula",
+      years: "2003 a 2004",
+    },
+    {
+      title: "Graduação em Psicologia",
+      where: "Universidade Santa Úrsula, Rio de Janeiro",
+      years: "1995 a 1999",
+    },
+  ] as TimelineItem[],
   career: [
-    "Coordenadora da Formação de Supervisores do IABSP",
-    "Supervisora clínica no atendimento psicológico do Departamento de Farmácia da UFRJ, por cerca de 10 anos",
-    "Professora e supervisora clínica na Universidade Santa Úrsula",
-    "Psicóloga concursada da Prefeitura de Nova Friburgo, no atendimento a mulheres vítimas de violência doméstica e a crianças",
+    {
+      title: "Supervisora clínica e coordenadora de Educação Continuada e Formação de Supervisores",
+      where: "Instituto de Análise Bioenergética de São Paulo (IABSP)",
+      years: "Desde 2021",
+    },
+    {
+      title: "Psicóloga clínica, psicanalista, psicoterapeuta corporal e supervisora",
+      where: "Consultório particular",
+      years: "Desde 2000",
+      note: "Atendimento a crianças, adolescentes e adultos, orientação de pais e grupos de movimento.",
+    },
+    {
+      title: "Assistente em formações de Somatic Experiencing",
+      where: "Turmas em São Paulo, Vitória, Belo Horizonte, Salvador e Brasília",
+    },
+    {
+      title: "Psicóloga e supervisora clínica, uma das fundadoras do programa de atendimento psicológico",
+      where: "Departamento de Farmácia da UFRJ",
+      years: "2012 a 2025",
+    },
+  ] as TimelineItem[],
+  moreTitle: "Experiências anteriores e outras atividades",
+  previous: [
+    { title: "Professora e supervisora de ensino de Psicologia", where: "Universidade Santa Úrsula", years: "2003 a 2008" },
+    { title: "Psicóloga", where: "Ambulatório da Providência", years: "2008 a 2009" },
+    { title: "Professora", where: "PSIU, curso preparatório para concursos públicos", years: "2005 a 2009" },
+    { title: "Professora", where: "SPIO, curso preparatório para concursos públicos", years: "2002 a 2005" },
+    { title: "Terapeuta", where: "Instituto Cultural Freud", years: "2000 a 2005" },
+    {
+      title: "Psicóloga concursada",
+      where: "Prefeitura Municipal de Nova Friburgo",
+      years: "2000 a 2004",
+    },
+    { title: "Psicóloga", where: "Lar de Vera Lúcia Sartori", years: "1997 a 2000" },
+  ] as TimelineItem[],
+  other: [
+    "Supervisão clínica em Psicanálise e Análise Bioenergética",
+    "Docência, palestras e atividades de formação profissional",
+    "Orientação de monografias e participação em bancas acadêmicas",
+    "Participação no fórum do Círculo Psicanalítico do Rio de Janeiro (CPRJ)",
+    "Facilitação de grupos de movimento em retiros para jovens e adultos, pela Ananda Marga, no Rio de Janeiro",
+    "Atendimento a pacientes vinculados à Petrobras, Transpetro e Termobahia",
   ],
 };
 
@@ -179,7 +246,11 @@ export const faq = {
     },
     {
       q: "Quem você atende?",
-      a: "Adultos, em psicoterapia individual, em português ou espanhol.",
+      a: "Crianças, adolescentes e adultos, em psicoterapia individual, em português ou espanhol. Também faço orientação de pais e acompanho questões familiares e relacionais.",
+    },
+    {
+      q: "Você faz supervisão clínica?",
+      a: "Sim. Supervisiono psicólogos e terapeutas, em formação e em prática, em Psicanálise e Análise Bioenergética. Para combinar, me chame no WhatsApp.",
     },
   ],
 };

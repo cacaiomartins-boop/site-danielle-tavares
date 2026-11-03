@@ -6,6 +6,7 @@ export default function Topics() {
     <section className="section">
       <div className="container-x">
         <h2 className="h2">{topics.title}</h2>
+        <p className="lead mt-4">{topics.intro}</p>
 
         <ul className="mt-10 grid gap-x-12 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
           {topics.items.map((t) => (

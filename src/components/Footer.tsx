@@ -13,6 +13,10 @@ export default function Footer() {
           Leblon · Copacabana · Online
           <br />
           WhatsApp {clinic.whatsappLabel}
+          <br />
+          <a href={`mailto:${clinic.email}`} className="underline underline-offset-4 hover:text-clay-600">
+            {clinic.email}
+          </a>
         </p>
         <p>© {new Date().getFullYear()} {clinic.name}</p>
       </div>
